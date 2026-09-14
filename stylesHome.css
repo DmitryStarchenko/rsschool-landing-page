@@ -661,6 +661,12 @@ h4 {
   justify-content: center;
 }
 
+.name_mod {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  margin: 0;
+}
+
 .modal.active {
   opacity: 1;
   visibility: visible;
@@ -808,6 +814,7 @@ h4 {
   font-size: 16px;
   line-height: 148%;
   color: #181c29;
+  margin: 0;
 }
 
 /* end best gifts section */

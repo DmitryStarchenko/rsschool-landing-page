@@ -151,6 +151,14 @@ for (let i of btn) {
     if (gift) {
       categoryMod.textContent = gift.category;
 
+      if (gift.category === "For Work") {
+        categoryMod.style.color = "#4361FF";
+      } else if (gift.category === "For Health") {
+        categoryMod.style.color = "#06A44F";
+      } else if (gift.category === "For Harmony") {
+        categoryMod.style.color = "#FF43F7";
+      }
+
       nameMod.textContent = gift.name;
 
       descriptionMod.textContent = gift.description;

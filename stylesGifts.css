@@ -480,6 +480,12 @@ h4 {
   visibility: visible;
 }
 
+.name_mod {
+  text-transform: uppercase;
+  font-family: "Montserrat";
+  margin: 0;
+}
+
 .gifts_card_mod {
   display: flex;
   flex-direction: column;
@@ -622,6 +628,7 @@ h4 {
   font-size: 16px;
   line-height: 148%;
   color: #181c29;
+  margin: 0;
 }
 
 /* end main */
