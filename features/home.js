@@ -160,7 +160,7 @@ const snowFlakes = document.querySelectorAll(".snowFlake");
 
 let giftsData = [];
 
-fetch("./gifts.json")
+fetch("./data/gifts.json")
   .then((response) => response.json())
   .then((data) => {
     giftsData = data;
@@ -190,13 +190,13 @@ for (let i of btn) {
 
       descriptionMod.textContent = gift.description;
 
-      let imgSrc = "./img-compressed/gift-for-work.png";
+      let imgSrc = "./assets/gift-for-work.png";
       if (gift.category === "For Work") {
-        imgSrc = "./img-compressed/gift-for-work.png";
+        imgSrc = "./assets/gift-for-work.png";
       } else if (gift.category === "For Health") {
-        imgSrc = "./img-compressed/gift-for-health.png";
+        imgSrc = "./assets/gift-for-health.png";
       } else if (gift.category === "For Harmony") {
-        imgSrc = "./img-compressed/gift-for-harmony.png";
+        imgSrc = "./assets/gift-for-harmony.png";
       }
       imageContMod.innerHTML =
         '<img class="img_gifts" src="' + imgSrc + '" alt="image gift" />';

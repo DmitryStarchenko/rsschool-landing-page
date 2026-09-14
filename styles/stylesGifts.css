@@ -3,14 +3,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+.body {
   margin: 0;
   overflow-x: hidden;
 }
 
-body.lock {
+.body.lock {
   overflow: hidden;
 }
+
 /* start header */
 
 header {
@@ -83,6 +84,25 @@ header {
 }
 
 .press_gifts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 12px 20px;
+  text-decoration: none;
+  user-select: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ff4646;
+  background: rgba(255, 70, 70, 0.1);
+  border-radius: 12px;
+  white-space: nowrap;
   width: 78px;
   height: 40px;
 }
@@ -139,9 +159,7 @@ header {
 
 /* start main */
 
-/* start hero section */
-
-.hero_section {
+.gifts_section {
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -149,31 +167,33 @@ header {
   align-items: center;
   width: 100%;
   max-width: 1424px;
-  height: 404px;
+  height: 100%;
+  min-height: 1274px;
   padding: 60px 8px;
-  background-image: url(bg-ball.png), url(bg-snow.png);
-  background-size: cover;
-  background-position: center;
+  isolation: isolate;
+  background-image: url(../assets/bg-garland.png);
+  background-size: contain;
+  background-position-x: center;
   background-repeat: no-repeat;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px;
   background-color: #ff4646;
 }
 
-.hero_content {
+.gifts_content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 60px 0px;
-  gap: 12px;
+  padding: 0px;
+  gap: 20px;
   width: 100%;
-  max-width: 432px;
-  height: 404px;
+  max-width: 1276px;
+  height: 100%;
+  min-height: 1274px;
 }
 
 .h1 {
   width: 100%;
-  max-width: 432px;
+  max-width: 426px;
   height: 100%;
   min-height: 144px;
   font-family: "Montserrat";
@@ -190,389 +210,167 @@ header {
   margin: 0;
 }
 
-.Allura_hero_top {
-  height: 24px;
-  font-family: "Allura";
-  font-size: 24px;
-  line-height: 100%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  margin: 0;
+.tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0px;
+  gap: 8px;
+  width: 100%;
+  max-width: 474px;
+  height: 40px;
 }
 
-.hero_button {
-  padding: 20px 32px;
-  width: 171px;
+.tab_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 25px;
   height: 16px;
-  background: #181c29;
-  border-radius: 20px;
+  background: #ff4646;
   font-family: "Montserrat";
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
   font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
   color: #ffffff;
+  cursor: pointer;
   white-space: nowrap;
-  text-decoration: none;
-  user-select: none;
-  cursor: pointer;
 }
 
 @media (hover: hover) {
-  .hero_button:hover {
-    background: #ffffff;
-    color: #181c29;
+  .tab_1:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
   }
 }
 
-.Allura_hero_bottom {
-  width: 426px;
-  height: 24px;
-  font-family: "Allura";
-  font-size: 24px;
-  line-height: 100%;
-  text-align: center;
+.tab_1.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.tab_2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 76px;
+  height: 16px;
+  background: #ff4646;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
   letter-spacing: 0.05em;
-  color: #ffffff;
-  margin: 0;
-}
-
-/* end hero section */
-
-/* start about section */
-
-.about_section {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1424px;
-  height: 528px;
-  padding: 60px 8px;
-  background-image: url(bg-snow.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #ff4646;
-}
-
-.about_content {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 1276px;
-  height: 528px;
-  border-radius: 20px;
-  background-color: white;
-}
-
-.about_cont_left {
-  display: flex;
-  align-items: center;
-  height: 528px;
-  width: 100%;
-  max-width: 518px;
-  padding: 0px 60px;
-}
-
-.about_cont_right {
-  display: flex;
-  align-items: center;
-  background-image: url(santa.png);
-  background-size: cover;
-  background-position: center;
-  height: 528px;
-  width: 100%;
-  max-width: 638px;
-  min-width: 376px;
-  border-radius: 20px;
-}
-
-.about_text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 60px 0px;
-  gap: 20px;
-  width: 100%;
-  max-width: 426px;
-  height: 100%;
-  min-height: 208px;
-  max-height: 316px;
-}
-
-.Allura_about {
-  font-family: "Allura";
-  font-size: 24px;
-  line-height: 100%;
-  color: #ff4646;
-  margin: 0;
-}
-
-.h2_about {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 152%;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #181c29;
-  margin: 0;
-}
-
-.text {
-  font-family: "Montserrat";
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 148%;
-  color: #181c29;
-  margin: 0;
-}
-
-/* end about section */
-
-/* start slider section */
-
-.slider_section {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1424px;
-  height: 368px;
-  padding: 60px 8px;
-  background-image: url(bg-snow.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #ff4646;
-  overflow: hidden;
-}
-
-.slider_content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  width: 100%;
-  max-width: 1276px;
-  height: 368px;
-}
-
-.slider_text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 0px;
-  gap: 12px;
-  width: 100%;
-  max-width: 426px;
-  height: 72px;
-}
-
-.Allura_slider {
-  font-family: "Allura";
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 100%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  margin: 0;
-}
-
-.h2_slider {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 152%;
-  text-align: center;
-  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #ffffff;
-  margin: 0;
-}
-
-.row {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0px;
-  width: 100%;
-  max-width: 1276px;
-  height: 200px;
-}
-
-.slider {
-  transition: transform 0.5s ease;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 0px;
-  gap: 20px;
-  width: 1993px;
-  height: 200px;
-}
-
-.row_text {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 80px;
-  line-height: 98px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.row_img {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  height: 200px;
-  width: 200px;
-  border-radius: 20px;
-}
-
-.slider_button {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0px;
-  gap: 20px;
-  width: 100%;
-  max-width: 1276px;
-  height: 56px;
-}
-
-.slider_but {
-  background-color: #ff4646;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 0px;
-  width: 56px;
-  height: 56px;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  border-radius: 20px;
   cursor: pointer;
-}
-
-.slider_but:disabled {
-  opacity: 0.4;
-}
-
-.slider_but:disabled:hover {
-  background-color: transparent;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  cursor: default;
-  opacity: 0.4;
+  white-space: nowrap;
 }
 
 @media (hover: hover) {
-  .slider_but:hover {
-    border: none;
-    background-color: #ffffff;
-    color: #ff4646;
+  .tab_2:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
   }
 }
 
-/* end slider section */
+.tab_2.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
 
-/* start best gifts section */
-
-.best_gifts_section {
-  margin: auto;
+.tab_3 {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 12px 20px;
   width: 100%;
-  max-width: 1424px;
-  height: 100%;
-  min-height: 434px;
-  padding: 60px 8px;
-  background-image: url(bg-snow.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: #ff4646;
-}
-
-.best_gifts_content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 20px;
-  width: 100%;
-  max-width: 1276px;
-  height: 100%;
-  min-height: 434px;
-}
-
-.best_gifts_text {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 12px;
-  width: 100%;
-  max-width: 426px;
-  height: 72px;
-}
-
-.Allura_best {
-  font-family: "Allura";
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 100%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  margin: 0;
-}
-
-.h2_best_gifts {
+  max-width: 86px;
+  height: 16px;
+  background: #ff4646;
   font-family: "Montserrat";
+  font-style: normal;
   font-weight: 600;
-  font-size: 24px;
-  line-height: 152%;
-  text-align: center;
-  letter-spacing: 0.16em;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   color: #ffffff;
-  margin: 0;
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-.best_gifts_allCard {
+@media (hover: hover) {
+  .tab_3:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+  }
+}
+
+.tab_3.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.tab_4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  width: 100%;
+  max-width: 103px;
+  height: 16px;
+  background: #ff4646;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+@media (hover: hover) {
+  .tab_4:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+  }
+}
+
+.tab_4.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+.gifts_allCard {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  align-content: center;
   padding: 0px;
   gap: 12px;
   width: 100%;
   max-width: 1276px;
   height: 100%;
-  min-height: 342px;
+  min-height: 1050px;
 }
 
 .gifts_card {
@@ -580,7 +378,8 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 0px;
-  width: 310px;
+  max-width: 310px;
+  width: 100%;
   height: 342px;
   background: #ecf3f8;
   border-radius: 20px;
@@ -609,12 +408,14 @@ header {
   justify-content: center;
   align-items: center;
   padding: 0px;
-  width: 310px;
+  max-width: 310px;
+  width: 100%;
   height: 230px;
 }
 
 .img_gifts {
-  width: 310px;
+  width: 100%;
+  max-width: 310px;
   height: 230px;
 }
 
@@ -623,7 +424,8 @@ header {
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  width: 290px;
+  width: 100%;
+  max-width: 290px;
   height: 112px;
   background: #ffffff;
   border-radius: 20px;
@@ -637,12 +439,24 @@ h4 {
   line-height: 130%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin: 0;
   white-space: nowrap;
+  margin: 0;
 }
 
 .name {
   margin: 0;
+}
+
+.work.active {
+  display: none;
+}
+
+.health.active {
+  display: none;
+}
+
+.harmony.active {
+  display: none;
 }
 
 .modal {
@@ -661,15 +475,15 @@ h4 {
   justify-content: center;
 }
 
+.modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
 .name_mod {
   text-transform: uppercase;
   font-family: "Montserrat";
   margin: 0;
-}
-
-.modal.active {
-  opacity: 1;
-  visibility: visible;
 }
 
 .gifts_card_mod {
@@ -804,6 +618,43 @@ h4 {
   height: 16px;
 }
 
+.show_more_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 8px;
+  width: 137px;
+  height: 40px;
+  border-radius: 12px;
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+}
+
+.show_more_btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.show_more_btn.hidden {
+  display: none;
+}
+
+.show_more_btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .description_mod {
   width: 100%;
   max-width: 360px;
@@ -816,144 +667,6 @@ h4 {
   color: #181c29;
   margin: 0;
 }
-
-/* end best gifts section */
-
-/* start CTA section */
-
-.CTA_section {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 1424px;
-  height: 548px;
-  padding: 60px 8px;
-  background-image: url(bg-forest.png), url(bg-snow.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 0px 0px 20px 20px;
-  background-color: #ff4646;
-}
-
-.CTA_content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 60px 0px;
-  width: 100%;
-  max-width: 1276px;
-  height: 548px;
-}
-
-.CTA_info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 60px 0px;
-  gap: 20px;
-  width: 100%;
-  max-width: 426px;
-  height: 428px;
-}
-
-.h2_CTA {
-  width: 100%;
-  max-width: 426px;
-  height: 108px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 152%;
-  text-align: center;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0;
-}
-
-.timer_content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  gap: 8px;
-  width: 426px;
-  height: 104px;
-}
-
-.Allura_CTA {
-  font-family: "Allura";
-  font-size: 24px;
-  line-height: 100%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  color: #ffffff;
-  margin: 0;
-}
-
-.timer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 8px 12px 12px 12px;
-  width: 320px;
-  height: 72px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
-}
-
-.timer_days {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px;
-  width: 80px;
-  height: 52px;
-}
-
-.h2_timer {
-  width: 80px;
-  height: 36px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 152%;
-  text-align: center;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0;
-}
-
-.h4_timer {
-  width: 80px;
-  height: 16px;
-  font-family: "Montserrat";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 130%;
-  text-align: center;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #ffffff;
-  margin: 0;
-}
-
-.separator {
-  width: 0px;
-  height: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
-}
-
-/* end CTA section */
 
 /* end main */
 

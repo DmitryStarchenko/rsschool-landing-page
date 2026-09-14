@@ -67,9 +67,9 @@ function getCategoryClass(category) {
 }
 
 function getCategoryImage(category) {
-  if (category === "For Work") return "./img-compressed/gift-for-work.png";
-  if (category === "For Health") return "./img-compressed/gift-for-health.png";
-  return "./img-compressed/gift-for-harmony.png";
+  if (category === "For Work") return "./assets/gift-for-work.png";
+  if (category === "For Health") return "./assets/gift-for-health.png";
+  return "./assets/gift-for-harmony.png";
 }
 
 function getCategoryColor(category) {
@@ -258,7 +258,7 @@ const imageContMod = document.querySelector(".image_cont_mod");
 const charMods = document.querySelectorAll(".char_mod");
 const snowFlakes = document.querySelectorAll(".snowFlake");
 
-fetch("./gifts.json")
+fetch("./data/gifts.json")
   .then((response) => response.json())
   .then((data) => {
     giftsData = data;
