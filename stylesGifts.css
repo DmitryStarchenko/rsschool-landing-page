@@ -618,6 +618,43 @@ h4 {
   height: 16px;
 }
 
+.show_more_btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 8px;
+  width: 137px;
+  height: 40px;
+  border-radius: 12px;
+  background: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+  user-select: none;
+}
+
+.show_more_btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.show_more_btn.hidden {
+  display: none;
+}
+
+.show_more_btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 .description_mod {
   width: 100%;
   max-width: 360px;

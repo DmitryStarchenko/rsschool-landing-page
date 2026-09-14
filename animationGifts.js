@@ -78,11 +78,22 @@ function getCategoryColor(category) {
   return "#FF43F7";
 }
 
-function renderCards(data) {
+function renderCards() {
   const container = document.querySelector(".gifts_allCard");
   container.innerHTML = "";
 
-  data.forEach(function (gift) {
+  const dataToRender = currentFilterCategory
+    ? giftsData.filter(function (gift) {
+        return gift.category === currentFilterCategory;
+      })
+    : giftsData;
+
+  const itemsToShow = isFilterActive
+    ? dataToRender.length
+    : Math.min(dataToRender.length, currentPage * PAGE_SIZE);
+
+  for (let i = 0; i < itemsToShow; i++) {
+    const gift = dataToRender[i];
     const categoryClass = getCategoryClass(gift.category);
     const imgSrc = getCategoryImage(gift.category);
 
@@ -105,20 +116,14 @@ function renderCards(data) {
       "</div>";
 
     container.appendChild(card);
-  });
+  }
 
   const cat = document.querySelectorAll(".category");
   for (let i of cat) {
     i.style.color = getCategoryColor(i.textContent);
   }
 
-  updateSortReferences();
-}
-
-function updateSortReferences() {
-  card_work = document.querySelectorAll(".work");
-  card_health = document.querySelectorAll(".health");
-  card_harmony = document.querySelectorAll(".harmony");
+  updateShowMoreButton();
 }
 
 function initSnowflakes() {
@@ -147,6 +152,35 @@ function initSnowflakes() {
   });
 }
 
+// start pagination
+
+const PAGE_SIZE = 12;
+let currentPage = 1;
+let isFilterActive = false;
+let currentFilterCategory = null;
+
+function updateShowMoreButton() {
+  const btn = document.querySelector(".show_more_btn");
+  if (!btn) return;
+
+  if (isFilterActive) {
+    btn.classList.add("hidden");
+    return;
+  }
+
+  btn.classList.remove("hidden");
+
+  const visibleItems = Math.min(giftsData.length, currentPage * PAGE_SIZE);
+
+  if (visibleItems >= giftsData.length) {
+    btn.disabled = true;
+  } else {
+    btn.disabled = false;
+  }
+}
+
+// end pagination
+
 // start sort
 
 const but_all = document.querySelector(".tab_1");
@@ -154,75 +188,64 @@ const but_work_tab = document.querySelector(".tab_2");
 const but_health_tab = document.querySelector(".tab_3");
 const but_harmony_tab = document.querySelector(".tab_4");
 
-let card_work = [];
-let card_health = [];
-let card_harmony = [];
-
-but_all.addEventListener("click", () => {
+but_all.addEventListener("click", function () {
   but_all.classList.add("active");
   but_work_tab.classList.remove("active");
   but_health_tab.classList.remove("active");
   but_harmony_tab.classList.remove("active");
-  for (let i of card_harmony) {
-    i.classList.remove("active");
-  }
-  for (let i of card_health) {
-    i.classList.remove("active");
-  }
-  for (let i of card_work) {
-    i.classList.remove("active");
-  }
+
+  isFilterActive = false;
+  currentFilterCategory = null;
+  currentPage = 1;
+  renderCards();
 });
 
-but_work_tab.addEventListener("click", () => {
+but_work_tab.addEventListener("click", function () {
   but_work_tab.classList.add("active");
   but_health_tab.classList.remove("active");
   but_harmony_tab.classList.remove("active");
   but_all.classList.remove("active");
-  for (let i of card_work) {
-    i.classList.remove("active");
-  }
-  for (let i of card_health) {
-    i.classList.add("active");
-  }
-  for (let i of card_harmony) {
-    i.classList.add("active");
-  }
+
+  isFilterActive = true;
+  currentFilterCategory = "For Work";
+  currentPage = 1;
+  renderCards();
 });
 
-but_health_tab.addEventListener("click", () => {
+but_health_tab.addEventListener("click", function () {
   but_health_tab.classList.add("active");
   but_work_tab.classList.remove("active");
   but_harmony_tab.classList.remove("active");
   but_all.classList.remove("active");
-  for (let i of card_health) {
-    i.classList.remove("active");
-  }
-  for (let i of card_work) {
-    i.classList.add("active");
-  }
-  for (let i of card_harmony) {
-    i.classList.add("active");
-  }
+
+  isFilterActive = true;
+  currentFilterCategory = "For Health";
+  currentPage = 1;
+  renderCards();
 });
 
-but_harmony_tab.addEventListener("click", () => {
+but_harmony_tab.addEventListener("click", function () {
   but_harmony_tab.classList.add("active");
   but_work_tab.classList.remove("active");
   but_health_tab.classList.remove("active");
   but_all.classList.remove("active");
-  for (let i of card_harmony) {
-    i.classList.remove("active");
-  }
-  for (let i of card_health) {
-    i.classList.add("active");
-  }
-  for (let i of card_work) {
-    i.classList.add("active");
-  }
+
+  isFilterActive = true;
+  currentFilterCategory = "For Harmony";
+  currentPage = 1;
+  renderCards();
 });
 
 // end sort
+
+// start show more
+
+document.querySelector(".show_more_btn").addEventListener("click", function () {
+  currentPage++;
+  renderCards();
+});
+
+// end show more
 
 //module window
 const modal = document.querySelector(".modal");
@@ -239,7 +262,7 @@ fetch("./gifts.json")
   .then((response) => response.json())
   .then((data) => {
     giftsData = data;
-    renderCards(data);
+    renderCards();
     initSnowflakes();
   })
   .catch((error) => {

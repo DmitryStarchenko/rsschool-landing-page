@@ -31,7 +31,7 @@ window.addEventListener("resize", () => {
 // start timer
 
 document.addEventListener("DOMContentLoaded", function () {
-  const deadline = new Date(2026, 0, 1);
+  const deadline = new Date(2027, 0, 1);
   let timerId = null;
 
   function countdownTimer() {
