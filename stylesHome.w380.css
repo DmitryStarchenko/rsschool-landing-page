@@ -1,0 +1,162 @@
+@media screen and (max-width: 380px) {
+  /* start Navigation */
+  header {
+    width: 364px;
+  }
+
+  .header_content {
+    width: 364px;
+
+  }
+
+  .content_nav {
+    width: 211px;
+  }
+
+  /* end Navigation */
+
+  /* start hero section */
+
+  .hero_section {
+    width: 364px;
+    height: 452px;
+    padding: 60px 8px;
+  }
+
+  .hero_content {
+    width: 364px;
+    height: 332px;
+  }
+
+  .h1 {
+    width: 364px;
+    height: 192px;
+  }
+
+  /* end hero section */
+
+  /* start about section */
+
+  .about_section {
+    width: 364px;
+    height: 880px;
+    padding: 60px 8px;
+  }
+
+  .about_content {
+    flex-direction: column;
+    width: 364px;
+    height: 880px;
+  }
+
+  .about_cont_left {
+    width: 324px;
+    height: 352px;
+    padding: 0px 20px;
+  }
+
+  .about_text {
+    width: 324px;
+    height: 232px;
+    padding: 60px 0px;
+  }
+
+  .about_cont_right {
+    width: 364px;
+    min-width: 364px;
+  }
+
+  /* end about section */
+
+  /*start slider section */
+
+  .slider_section {
+    width: 364px;
+    height: 368px;
+  }
+
+  .slider_content {
+    width: 364px;
+  }
+
+  .row {
+    width: 364px;
+  }
+
+  .slider_button {
+    width: 364px;
+  }
+
+  /* end slider section */
+
+  /* start best gifts section */
+
+  .best_gifts_section {
+    width: 364px;
+    height: 1496px;
+    padding: 60px 8px;
+  }
+
+  .best_gifts_content {
+    width: 364px;
+    height: 1496px;
+  }
+
+  .best_gifts_allCard {
+    flex-direction: column;
+    align-items: center;
+    width: 364px;
+    height: 1404px;
+  }
+
+  /* end best gifts section */
+
+  /*start CTA section */
+
+  .CTA_section {
+    width: 364px;
+    height: 584px;
+    padding: 60px 8px;
+  }
+
+  .CTA_content {
+    width: 364px;
+    height: 464px;
+  }
+
+  .CTA_info {
+    width: 364px;
+    height: 344px;
+  }
+
+  .h2_CTA {
+    width: 368px;
+    height: 144px;
+  }
+
+  /* end CTA section */
+
+  /* start footer */
+
+  .footer {
+    width: 360px;
+  }
+
+  .footer_content {
+    width: 364px;
+  }
+
+  .footer_contacts {
+    width: 364px;
+  }
+
+  .cards_contacts {
+    width: 324px;
+  }
+
+  .other_contacts {
+    width: 364px;
+  }
+
+  /* end footer */
+}

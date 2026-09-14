@@ -1,0 +1,101 @@
+@media screen and (max-width: 468px) {
+  .tab_1 {
+    padding: 12px 8px;
+  }
+
+  .tab_2 {
+    padding: 12px 8px;
+  }
+
+  .tab_3 {
+    padding: 12px 8px;
+  }
+
+  .tab_4 {
+    padding: 12px 8px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+
+  /* start Navigation */
+
+  header {
+    width: 364px;
+  }
+
+  .header_content {
+    width: 364px;
+  }
+
+  .content_nav {
+    width: 211px;
+  }
+
+  /* end Navigation */
+
+  /* start gifts section */
+
+  .gifts_section {
+    width: 364px;
+    min-height: 12732px;
+    height: 100%;
+    padding: 60px 8px;
+    background-size: 380px;
+  }
+
+  .gifts_content {
+    width: 364px;
+    min-height: 12732px;
+    height: 100%;
+  }
+
+  .h1 {
+    width: 364px;
+    height: 240px;
+  }
+
+  .tabs {
+    gap: 0px;
+    width: 100%;
+    max-width: 354px;
+    height: 40px;
+  }
+
+  .gifts_allCard {
+    flex-direction: column;
+    width: 364px;
+    height: 100%;
+    min-height: 12732px;
+  }
+
+
+ /* start footer */
+
+ .footer {
+  width: 360px;
+  height: 808px;
+}
+
+.footer_content {
+  width: 364px;
+  height: 808px;
+}
+
+.footer_contacts {
+  width: 364px;
+  height: 636px;
+}
+
+.cards_contacts {
+  width: 324px;
+  height: 204px;
+}
+
+.other_contacts {
+  width: 364px;
+  height: 112px;
+}
+
+/* end footer */
+}
