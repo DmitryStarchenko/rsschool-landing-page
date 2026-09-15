@@ -10,7 +10,7 @@ burger.addEventListener("click", () => {
   body.classList.toggle("lock");
 });
 
-document.querySelectorAll(".press").forEach((item) =>
+document.querySelectorAll(".navigation a").forEach((item) =>
   item.addEventListener("click", () => {
     burger.classList.remove("active");
     menu.classList.remove("active");
