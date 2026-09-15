@@ -17,7 +17,6 @@
 }
 
 @media screen and (max-width: 380px) {
-
   /* start Navigation */
 
   header {
@@ -38,7 +37,6 @@
 
   .gifts_section {
     width: 364px;
-    min-height: 12732px;
     height: 100%;
     padding: 60px 8px;
     background-size: 380px;
@@ -46,7 +44,6 @@
 
   .gifts_content {
     width: 364px;
-    min-height: 12732px;
     height: 100%;
   }
 
@@ -66,36 +63,34 @@
     flex-direction: column;
     width: 364px;
     height: 100%;
-    min-height: 12732px;
   }
 
+  /* start footer */
 
- /* start footer */
+  .footer {
+    width: 360px;
+    height: 808px;
+  }
 
- .footer {
-  width: 360px;
-  height: 808px;
-}
+  .footer_content {
+    width: 364px;
+    height: 808px;
+  }
 
-.footer_content {
-  width: 364px;
-  height: 808px;
-}
+  .footer_contacts {
+    width: 364px;
+    height: 636px;
+  }
 
-.footer_contacts {
-  width: 364px;
-  height: 636px;
-}
+  .cards_contacts {
+    width: 324px;
+    height: 204px;
+  }
 
-.cards_contacts {
-  width: 324px;
-  height: 204px;
-}
+  .other_contacts {
+    width: 364px;
+    height: 112px;
+  }
 
-.other_contacts {
-  width: 364px;
-  height: 112px;
-}
-
-/* end footer */
+  /* end footer */
 }

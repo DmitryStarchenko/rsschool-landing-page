@@ -20,7 +20,7 @@
     display: flex;
     width: 20px;
     height: 1px;
-    background-color: #181C29;
+    background-color: var(--color-text-primary);
     transition: all 0.3s ease-in-out;
   }
 
@@ -41,19 +41,19 @@
   .burger_button.active .bar:nth-child(1) {
     transform: translateY(7px) rotate(45deg);
     display: flex;
-    position:relative;
+    position: relative;
   }
 
   .burger_button.active .bar:nth-child(2) {
     transform: translateY(-2px) rotate(-45deg);
     display: flex;
-    position:relative;
+    position: relative;
   }
 
   .navigation {
     height: 100%;
     max-width: 768px;
-    width:100%;
+    width: 100%;
     top: 64px;
     left: 0;
     gap: 8px;
@@ -61,9 +61,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--color-bg-primary);
     text-align: center;
-    margin:0;
+    margin: 0;
     padding: 0;
     z-index: 1000;
     position: fixed;
@@ -76,7 +76,7 @@
   }
 
   .navigation li.active {
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     font-size: 30px;
     font-weight: 600;
     line-height: 1.52;
@@ -84,17 +84,19 @@
     text-transform: uppercase;
     margin: 0;
     gap: 8px;
-    color: #181C29;
+    color: var(--color-text-primary);
     pointer-events: auto;
     background-color: transparent;
-   }
+  }
 
   li.active:hover {
     height: 60px;
     cursor: pointer;
     border-radius: 12px;
-    color: #FF4646;
-    transition: background-color 0.3s, color 0.3s;
+    color: var(--color-bg-section);
+    transition:
+      background-color 0.3s,
+      color 0.3s;
     background-color: rgb(255, 70, 70, 0.1);
   }
 
@@ -266,5 +268,5 @@
     max-width: 752px;
   }
 
-    /* end footer */
+  /* end footer */
 }

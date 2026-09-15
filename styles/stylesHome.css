@@ -1,5 +1,50 @@
+:root {
+  /* light theme (default) */
+  --color-bg-primary: #ffffff;
+  --color-text-primary: #181c29;
+  --color-bg-card: #ecf3f8;
+  --color-bg-card-text: #ffffff;
+  --color-bg-footer: #ffffff;
+  --color-bg-modal-overlay: rgba(24, 28, 41, 0.8);
+  --color-bg-section: #ff4646;
+  --color-bg-about-content: #ffffff;
+  --color-soc-icon: #181c29;
+  --color-bg-soc-block: #ffffff;
+  --color-bg-modal-card: #ecf3f8;
+  --color-bg-modal-text: #ffffff;
+  --color-bg-header: #ffffff;
+  --color-bg-header-content: #ffffff;
+  --color-text-header: #181c29;
+  --color-bg-hero-button: #181c29;
+  --color-text-hero-button: #ffffff;
+  --color-bg-hero-button-hover: #ffffff;
+  --color-text-hero-button-hover: #181c29;
+}
+
+.dark-theme {
+  --color-bg-primary: #181c29;
+  --color-text-primary: #e0e0e0;
+  --color-bg-card: #2a2a3d;
+  --color-bg-card-text: #1e1e30;
+  --color-bg-footer: #181c29;
+  --color-bg-modal-overlay: rgba(0, 0, 0, 0.85);
+  --color-bg-section: #912424;
+  --color-bg-about-content: #1e1e30;
+  --color-soc-icon: #e0e0e0;
+  --color-bg-soc-block: #2a2a3d;
+  --color-bg-modal-card: #2a2a3d;
+  --color-bg-modal-text: #1e1e30;
+  --color-bg-header: #181c29;
+  --color-bg-header-content: #181c29;
+  --color-text-header: #e0e0e0;
+  --color-bg-hero-button: #e0e0e0;
+  --color-text-hero-button: #181c29;
+  --color-bg-hero-button-hover: #181c29;
+  --color-text-hero-button-hover: #e0e0e0;
+}
+
 html {
-  background-color: #ffffff;
+  background-color: var(--color-bg-primary);
   scroll-behavior: smooth;
 }
 
@@ -21,7 +66,7 @@ header {
   width: 100%;
   max-width: 1424px;
   height: 64px;
-  background: #ffffff;
+  background: var(--color-bg-header);
   margin: auto;
 }
 
@@ -34,7 +79,7 @@ header {
   width: 100%;
   max-width: 1276px;
   height: 64px;
-  background: #ffffff;
+  background: var(--color-bg-header);
 }
 
 .logo {
@@ -55,7 +100,7 @@ header {
   line-height: 130%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #181c29;
+  color: var(--color-text-primary);
   white-space: nowrap;
   cursor: pointer;
 }
@@ -118,7 +163,7 @@ header {
   line-height: 130%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #181c29;
+  color: var(--color-text-primary);
   white-space: nowrap;
   cursor: pointer;
 }
@@ -129,7 +174,7 @@ header {
 
 @media (hover: hover) {
   .press_text:hover {
-    color: #ff4646;
+    color: var(--color-bg-section);
     background: rgba(255, 70, 70, 0.1);
     border-radius: 12px;
   }
@@ -156,7 +201,7 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 20px 20px 0px 0px;
-  background-color: #ff4646;
+  background-color: var(--color-bg-section);
 }
 
 .hero_content {
@@ -205,14 +250,14 @@ header {
   padding: 20px 32px;
   width: 171px;
   height: 16px;
-  background: #181c29;
+  background: var(--color-bg-hero-button);
   border-radius: 20px;
   font-family: "Montserrat";
   text-align: center;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   font-size: 12px;
-  color: #ffffff;
+  color: var(--color-text-hero-button);
   white-space: nowrap;
   text-decoration: none;
   user-select: none;
@@ -221,8 +266,8 @@ header {
 
 @media (hover: hover) {
   .hero_button:hover {
-    background: #ffffff;
-    color: #181c29;
+    background: var(--color-bg-hero-button-hover);
+    color: var(--color-text-hero-button-hover);
   }
 }
 
@@ -256,7 +301,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #ff4646;
+  background-color: var(--color-bg-section);
 }
 
 .about_content {
@@ -266,7 +311,8 @@ header {
   max-width: 1276px;
   height: 528px;
   border-radius: 20px;
-  background-color: white;
+  background-color: var(--color-bg-about-content);
+  margin-right: 5px;
 }
 
 .about_cont_left {
@@ -309,7 +355,7 @@ header {
   font-family: "Allura";
   font-size: 24px;
   line-height: 100%;
-  color: #ff4646;
+  color: var(--color-bg-section);
   margin: 0;
 }
 
@@ -320,7 +366,7 @@ header {
   line-height: 152%;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #181c29;
+  color: var(--color-text-primary);
   margin: 0;
 }
 
@@ -329,7 +375,7 @@ header {
   font-weight: 400;
   font-size: 16px;
   line-height: 148%;
-  color: #181c29;
+  color: var(--color-text-primary);
   margin: 0;
 }
 
@@ -351,7 +397,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #ff4646;
+  background-color: var(--color-bg-section);
   overflow: hidden;
 }
 
@@ -458,7 +504,7 @@ header {
 }
 
 .slider_but {
-  background-color: #ff4646;
+  background-color: var(--color-bg-section);
   box-sizing: border-box;
   display: flex;
   flex-direction: row;
@@ -489,7 +535,7 @@ header {
   .slider_but:hover {
     border: none;
     background-color: #ffffff;
-    color: #ff4646;
+    color: var(--color-bg-section);
   }
 }
 
@@ -512,7 +558,7 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #ff4646;
+  background-color: var(--color-bg-section);
 }
 
 .best_gifts_content {
@@ -582,7 +628,7 @@ header {
   padding: 0px;
   width: 310px;
   height: 342px;
-  background: #ecf3f8;
+  background: var(--color-bg-card);
   border-radius: 20px;
   text-decoration: none;
   user-select: none;
@@ -592,14 +638,14 @@ header {
   line-height: 152%;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #181c29;
+  color: var(--color-text-primary);
   margin: 0;
   cursor: pointer;
 }
 
 @media (hover: hover) {
   .gifts_card:hover {
-    color: #ff4646;
+    color: var(--color-bg-section);
   }
 }
 
@@ -625,7 +671,7 @@ header {
   gap: 8px;
   width: 290px;
   height: 112px;
-  background: #ffffff;
+  background: var(--color-bg-card-text);
   border-radius: 20px;
   padding: 20px 0px 0px 20px;
 }
@@ -654,7 +700,7 @@ h4 {
   z-index: 1;
   opacity: 0;
   visibility: hidden;
-  background-color: rgba(24, 28, 41, 0.8);
+  background-color: var(--color-bg-modal-overlay);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -678,7 +724,7 @@ h4 {
   width: 100%;
   max-width: 400px;
   height: 514px;
-  background: #ecf3f8;
+  background: var(--color-bg-card);
   border-radius: 20px;
   cursor: default;
   position: relative;
@@ -714,7 +760,7 @@ h4 {
   width: 100%;
   max-width: 360px;
   height: 244px;
-  background: #ffffff;
+  background: var(--color-bg-modal-text);
   border-radius: 20px;
 }
 
@@ -748,7 +794,7 @@ h4 {
   line-height: 130%;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: #181c29;
+  color: var(--color-text-primary);
 }
 
 .characteristics_mod {
@@ -780,7 +826,7 @@ h4 {
   font-size: 16px;
   line-height: 148%;
   letter-spacing: 0.04em;
-  color: #181c29;
+  color: var(--color-text-primary);
 }
 
 .char_mod {
@@ -791,7 +837,7 @@ h4 {
   font-weight: 400;
   font-size: 16px;
   line-height: 148%;
-  color: #181c29;
+  color: var(--color-text-primary);
 }
 
 .snowFlake {
@@ -813,7 +859,7 @@ h4 {
   font-weight: 400;
   font-size: 16px;
   line-height: 148%;
-  color: #181c29;
+  color: var(--color-text-primary);
   margin: 0;
 }
 
@@ -836,7 +882,7 @@ h4 {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 0px 0px 20px 20px;
-  background-color: #ff4646;
+  background-color: var(--color-bg-section);
 }
 
 .CTA_content {
@@ -968,7 +1014,7 @@ h4 {
   width: 100%;
   max-width: 1424px;
   height: 376px;
-  background: #ffffff;
+  background: var(--color-bg-footer);
 }
 
 .footer_content {
@@ -1004,7 +1050,7 @@ h4 {
   width: 100%;
   max-width: 417.33px;
   height: 164px;
-  background: #ecf3f8;
+  background: var(--color-bg-card);
   border-radius: 20px;
   font-family: "Montserrat";
   font-style: normal;
@@ -1014,7 +1060,7 @@ h4 {
   text-align: center;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #181c29;
+  color: var(--color-text-primary);
   cursor: pointer;
   text-decoration: none;
   user-select: none;
@@ -1031,7 +1077,7 @@ h4 {
 
 @media (hover: hover) {
   .cards_contacts:hover {
-    color: #ff4646;
+    color: var(--color-bg-section);
   }
 }
 
@@ -1069,19 +1115,19 @@ h4 {
   padding: 8px;
   width: 40px;
   height: 40px;
-  background: #ffffff;
+  background: var(--color-bg-footer);
   cursor: pointer;
   text-decoration: none;
   user-select: none;
 }
 
 .soc_block svg {
-  color: #181c29;
+  color: var(--color-soc-icon);
 }
 
 @media (hover: hover) {
   .soc_block svg:hover {
-    color: #ff4646;
+    color: var(--color-bg-section);
   }
 }
 
@@ -1092,7 +1138,7 @@ h4 {
   font-size: 16px;
   line-height: 148%;
   text-align: center;
-  color: #181c29;
+  color: var(--color-text-primary);
   margin: 0;
 }
 
@@ -1107,7 +1153,7 @@ h4 {
   text-align: center;
   white-space: nowrap;
   letter-spacing: 0.05em;
-  color: #181c29;
+  color: var(--color-text-primary);
   margin: 0;
   text-decoration: none;
   user-select: none;
@@ -1115,8 +1161,39 @@ h4 {
 
 @media (hover: hover) {
   .Allura_footer:hover {
-    color: #ff4646;
+    color: var(--color-bg-section);
   }
 }
 
 /* end footer */
+
+/* start theme toggle */
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  margin-right: 20px;
+  user-select: none;
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+@media (hover: hover) {
+  .theme-toggle:hover {
+    color: var(--color-bg-section);
+    background: rgba(255, 70, 70, 0.1);
+    border-radius: 12px;
+  }
+}
+/* end theme toggle */
