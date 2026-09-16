@@ -521,6 +521,7 @@ h4 {
   text-transform: uppercase;
   font-family: "Montserrat";
   margin: 0;
+  color: var(--color-text-primary);
 }
 
 .gifts_card_mod {

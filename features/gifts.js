@@ -333,3 +333,11 @@ window.onclick = function (event) {
     body.classList.remove("lock");
   }
 };
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    modal.style.opacity = 0;
+    modal.style.visibility = "hidden";
+    body.classList.remove("lock");
+  }
+});

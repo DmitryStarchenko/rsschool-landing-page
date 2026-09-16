@@ -72,11 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentOffset = 0;
 
-  const updateButtons = () => {
-    butLeft.disabled = currentOffset === 0;
-    butRight.disabled = currentOffset >= maxOffset;
-  };
-
   const moveSlider = () => {
     slider.style.transform = "translateX(-" + currentOffset + "px)";
   };
@@ -84,17 +79,19 @@ document.addEventListener("DOMContentLoaded", () => {
   butLeft.addEventListener("click", () => {
     if (currentOffset > 0) {
       currentOffset = Math.max(0, currentOffset - step);
-      moveSlider();
-      updateButtons();
+    } else {
+      currentOffset = maxOffset;
     }
+    moveSlider();
   });
 
   butRight.addEventListener("click", () => {
     if (currentOffset < maxOffset) {
       currentOffset = Math.min(maxOffset, currentOffset + step);
-      moveSlider();
-      updateButtons();
+    } else {
+      currentOffset = 0;
     }
+    moveSlider();
   });
 
   window.addEventListener("resize", () => {
@@ -248,3 +245,11 @@ window.onclick = function (event) {
     body.classList.remove("lock");
   }
 };
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    modal.style.opacity = 0;
+    modal.style.visibility = "hidden";
+    body.classList.remove("lock");
+  }
+});
