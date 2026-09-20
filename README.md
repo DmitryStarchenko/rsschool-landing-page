@@ -1,1 +1,1 @@
-# rsschool-landing-page (part 1)
+# rsschool-landing-page (part 2)
