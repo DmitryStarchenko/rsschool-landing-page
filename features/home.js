@@ -97,10 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", () => {
     slider.style.transform = "translateX(0)";
     currentOffset = 0;
-    updateButtons();
   });
-
-  updateButtons();
 });
 
 // end slider
@@ -154,6 +151,26 @@ const descriptionMod = document.querySelector(".description_mod");
 const imageContMod = document.querySelector(".image_cont_mod");
 const charMods = document.querySelectorAll(".char_mod");
 const snowFlakes = document.querySelectorAll(".snowFlake");
+const buttonsChar = document.querySelectorAll(".button_char");
+
+buttonsChar.forEach((button) => {
+  button.addEventListener("click", function () {
+    const powerBlock = this.closest(".supPow_mod");
+    const charMod = powerBlock.querySelector(".char_mod");
+    const snowFlake = powerBlock.querySelector(".snowFlake");
+
+    let value = parseInt(charMod.textContent.replace("+", "")) || 0;
+
+    value += this.textContent.trim() === "+" ? 100 : -100;
+    value = Math.max(0, Math.min(500, value));
+
+    charMod.textContent = `+${value}`;
+
+    snowFlake.querySelectorAll("path").forEach((path, index) => {
+      path.setAttribute("fill-opacity", index < value / 100 ? "1" : "0.1");
+    });
+  });
+});
 
 let giftsData = [];
 

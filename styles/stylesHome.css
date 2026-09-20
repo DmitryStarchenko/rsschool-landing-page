@@ -831,7 +831,7 @@ h4 {
 }
 
 .char_mod {
-  width: 40px;
+  min-width: 45px;
   height: 24px;
   font-family: "Montserrat";
   font-style: normal;
@@ -839,6 +839,26 @@ h4 {
   font-size: 16px;
   line-height: 148%;
   color: var(--color-text-primary);
+}
+
+.button_char {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  background: transparent;
+  border: 2px solid var(--color-bg-modal-overlay);
+  border-radius: 5px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+@media (hover: hover) {
+  .button_char:hover {
+    color: var(--color-bg-section);
+    border-color: var(--color-bg-section);
+  }
 }
 
 .snowFlake {
