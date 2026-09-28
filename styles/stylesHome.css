@@ -719,6 +719,17 @@ h4 {
   visibility: visible;
 }
 
+.category_mod {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+  white-space: nowrap;
+}
+
 .gifts_card_mod {
   display: flex;
   flex-direction: column;
